@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Working on Video Element | Add video element using JavaScript</title>
+  <style>
+	body{
+		margin:0px;
+		padding:0px;
+		overflow:hidden;
+	}
+  </style>
+</head>
+<body onload="init();">
+
+</body>
+  <script>
+	var video=document.createElement('video');
+	video.id='myVideo';
+	video.src = 'myvideo.mp4';
+	video.width='500';
+	video.height='300';
+	video.controls=true;
+	document.body.appendChild(video);
+	var v=document.querySeelctor("#myVideo");
+	function init(){
+		video.height=window.innerHeight;
+		video.width=window.innerWidth;	
+		window.onresize= function (){
+			video.height=window.innerHeight;
+			video.width=window.innerWidth;	
+		}
+	}
+  </script>
+</html>
